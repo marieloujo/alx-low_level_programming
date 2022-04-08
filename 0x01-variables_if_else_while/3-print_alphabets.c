@@ -15,8 +15,9 @@ int main(void)
 
 	for (_upper_case = 'A'; _upper_case <= 'Z'; _upper_case++)
 		putchar(_upper_case);
+
+
 	putchar('\n');
 
 	return (0);
-
 }
