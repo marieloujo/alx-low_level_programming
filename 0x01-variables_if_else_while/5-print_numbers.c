@@ -10,7 +10,11 @@ int main(void)
 	int _number;
 
 	for (_number = 0; _number < 10; _number++)
+
 		putchar((_number + '0'));
+
 	putchar('\n');
+
 	return (0);
+
 }
