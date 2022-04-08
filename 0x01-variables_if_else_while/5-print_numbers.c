@@ -8,10 +8,11 @@
 int main(void)
 {
 
-	char _low_case;
+	int _number;
 
-	for (_low_case = 'a'; _low_case <= 'z'; _low_case++)
-		putchar(_low_case);
+	for (_number = 0; _number < 10; _number++)
+
+		putchar((_number));
 
 	putchar('\n');
 
