@@ -1,4 +1,4 @@
-#include "header.h"
+#include "main.h"
 
 /**
  * times_table - prints times table

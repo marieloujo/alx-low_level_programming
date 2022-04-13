@@ -1,8 +1,8 @@
-#include "header.h"
+#include "main.h"
 #include <stdio.h>
 
 /**
- * main - check the code for header School students.
+ * main - check the code for main School students.
  *
  * Return: Always 0.
  */
