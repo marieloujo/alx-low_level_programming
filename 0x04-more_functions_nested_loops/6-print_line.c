@@ -9,20 +9,13 @@
 void print_line(int n)
 {
 
-	int i = 0/* , _underscore = 95 */;
+	int i = 0;
 
-	if (n <= 0)
-	{
-		_putchar('\n');
-
-		return;
-	}
-
-	for (i = 0; i <= n; i++)
+	while (i < n && n > 0)
 	{
 		_putchar('_');
+		i++;
 	}
-
 	_putchar('\n');
 
 }
