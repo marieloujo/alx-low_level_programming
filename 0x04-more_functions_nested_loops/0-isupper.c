@@ -1,13 +1,11 @@
 #include "main.h"
-#include <ctype.h>
+
 
 /**
-* Function that checks for uppercase character
-* @c: variable that contain the cheked character
-*
-* Returns 1 if c is uppercase
-* Returns 0 otherwise
-*/
+ * _isupper - check for upper case letter
+ * @c : character to check the case
+ * Return:0 or 1
+ */
 int _isupper(int c)
 {
 
