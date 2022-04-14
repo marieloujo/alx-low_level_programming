@@ -8,19 +8,17 @@
 int main(void)
 {
 
-	unsigned int long n = 612852475143, a = (int) sqrt(n);
+	long int x = 612852475143;
+	long int py;
 
-	while (1)
+	for (py = 2; py < x; py++)
 	{
-
-		if (n % a == 0)
+		if (x % py == 0)
 		{
-			printf("%lu \n", n / a);
-			break;
+			x = x / py;
 		}
-		a--;
-
 	}
+	printf("%ld\n", py);
 
 	return (0);
 }
