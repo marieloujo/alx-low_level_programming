@@ -6,7 +6,7 @@
 *
 * @s: pointer of char
 *
-* Return : length
+* Return: length value
 */
 int _strlen(char *s)
 {
