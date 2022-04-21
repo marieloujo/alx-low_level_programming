@@ -20,13 +20,14 @@ void puts_half(char *str)
 
 		length++;
 
-	str_half = length / 2;
+	str_half = (length - 1) / 2;
 
 
-	for (i = str_half; i < length; i++)
+	for (i = (str_half + 1); i < length; i++)
 	{
 		_putchar(str[i]);
 	}
+
 
 	_putchar('\n');
 
