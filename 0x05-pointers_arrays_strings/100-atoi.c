@@ -19,7 +19,7 @@ int _atoi(char *str)
 		if (isdigit(*str) || ((*str == '-' || *str == '+') && isdigit(*(str + 1))))
 		{
 
-			val = strtol(str, &str, 10);
+			return strtol(str, &str, 10);
 
 		}
 
