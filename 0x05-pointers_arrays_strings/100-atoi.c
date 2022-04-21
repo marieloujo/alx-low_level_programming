@@ -11,15 +11,24 @@
  */
 int _atoi(char *str)
 {
-	int val = 0;
+	int val = 0, sign = 1;
 
 
 	while (*str)
 	{
+
+		if (*str == '-')
+		{
+			sign *= (-1);
+		}
+
 		if (isdigit(*str) || ((*str == '-' || *str == '+') && isdigit(*(str + 1))))
 		{
 
-			return strtol(str, &str, 10);
+            val = strtol(str, &str, 10);
+            val = abs(val);
+            
+			return (val * sign);
 
 		}
 
