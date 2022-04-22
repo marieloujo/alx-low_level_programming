@@ -18,10 +18,10 @@ char *_strncat(char *dest, char *src, int n)
 	dest_length = strlen(dest);
 	src_length  = strlen(src);
 
-    if (src_length < n)
-    {
-        n = src_length;
-    }
+	if (src_length < n)
+	{
+		n = src_length;
+	}
 
 	while (i < n)
 	{
