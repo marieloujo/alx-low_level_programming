@@ -19,12 +19,12 @@ char *rot13(char *string)
 				(*(string + i) >= 97 && *(string + i) <= 122))
 		{
 
-			/* if ((*(string + i) >= 110 && *(string + i) <= 122) ||
+			if ((*(string + i) >= 110 && *(string + i) <= 122) ||
 				(*(string + i) >= 78 && *(string + i) <= 90))
 
 				*(string + i) = (*(string + i) - 13);
 
-			else
+			/* else
 				*(string + i) = (*(string + i) + 13); */
 
 
