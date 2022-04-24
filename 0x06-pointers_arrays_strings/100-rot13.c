@@ -1,6 +1,5 @@
 #include "main.h"
 #include <stdio.h>
-
 /**
 * rot13 - a function that encodes a string into  rot13.
 *
@@ -20,13 +19,13 @@ char *rot13(char *string)
 				(*(string + i) >= 97 && *(string + i) <= 122))
 		{
 
-			if ((*(string + i) >= 110 && *(string + i) <= 122) ||
+			/* if ((*(string + i) >= 110 && *(string + i) <= 122) ||
 				(*(string + i) >= 78 && *(string + i) <= 90))
 
 				*(string + i) = (*(string + i) - 13);
 
 			else
-				*(string + i) = (*(string + i) + 13);
+				*(string + i) = (*(string + i) + 13); */
 
 
 			break;
@@ -35,6 +34,7 @@ char *rot13(char *string)
 
 
 	}
+
 
 	return (string);
 }
