@@ -20,7 +20,7 @@ char *rot13(char *string)
 		{
 
 			*(string + i) = (*(string + i) + 13);
-            changed = 1;
+			changed = 1;
 
 			break;
 		}
@@ -31,7 +31,7 @@ char *rot13(char *string)
 
 			*(string + i) = (*(string + i) - 13);
 
-        changed = 0;
+		changed = 0;
 
 	}
 
