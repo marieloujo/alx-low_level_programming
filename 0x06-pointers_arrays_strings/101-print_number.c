@@ -17,15 +17,10 @@ void print_number(int n)
 	}
 
 
-	if (n / 10 != 0)
-	{
-		print_number(n / 10);
-	}
-	_putchar((n % 10) + '0');
-
-	/* _write_number(n); */
+	_write_number(n);
 
 }
+
 
 /**
 * _write_number - a function that prints an integer.
@@ -33,7 +28,7 @@ void print_number(int n)
 * @n: integer we want to print
 *
 * Return: void
-
+*/
 void _write_number(int n)
 {
 
@@ -48,4 +43,3 @@ void _write_number(int n)
 	}
 
 }
-*/
