@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stddef.h>
+#include <string.h>
 
 /**
  * _strchr - locates a character in a string
@@ -12,18 +13,17 @@
 char *_strchr(char *s, char c)
 {
 
-	char *found;
-	int i = 0;
+	int  i = 0, length = strlen(s);
 
-	while (*(s + i) != '\0')
+
+	while (i <= length)
 	{
 
-		if (*(s + i) == c)
-		{
-			found = (s + i);
-			return (found);
-		}
+		if (*s == c)
 
+			return (s);
+
+		s++;
 		i++;
 
 	}
