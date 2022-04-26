@@ -8,8 +8,8 @@
  *
  * Return: This function
  * returns the number of characters
- * in the initial segment of s 
- * which consist only of characters 
+ * in the initial segment of s
+ * which consist only of characters
  * from accept.
  *
 */
