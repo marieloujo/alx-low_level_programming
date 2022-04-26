@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
- * simple_print_buffer - fills memory with a constant byte
+ * _memset - fills memory with a constant byte
  *
  * @s: pointer of memory area
  * @b: constant byte
@@ -13,14 +13,14 @@
 char *_memset(char *s, char b, unsigned int n)
 {
 
-    unsigned int i = 0;
+	unsigned int i = 0;
 
-    while (i < n)
-    {
-        *(s + i) = b;
-        i++;
-    }
+	while (i < n)
+	{
+		*(s + i) = b;
+		i++;
+	}
 
-    return s;
+	return (s);
 
 }
