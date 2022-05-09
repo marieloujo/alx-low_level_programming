@@ -1,24 +1,72 @@
 #include "main.h"
-#include <stdio.h>
-#include <stdlib.h>
 
 /**
- * print_number - prints numbers
- * @n: number to be printed
- * Return:void
- */
-void print_number(unsigned long int n)
+ * _puts - prints a string, followed by a new line,
+ * @str: pointer to the string to print
+ * Return: void
+*/
+
+
+void _puts(char *str)
 {
-
-	if (n / 10)
-	{
-		print_number(n / 10);
-	}
-
-	_putchar((n % 10) + '0');
+int i = 0;
+while (str[i])
+{
+	_putchar(str[i]);
+	i++;
+}
 
 }
 
+/**
+ * _atoi - convert a string to an integer.
+ * @s: char type string
+ * Return: integer converted
+ */
+
+int _atoi(const char *s)
+{
+	int sign = 1;
+	unsigned long int resp = 0, firstNum, i;
+
+	for (firstNum = 0; !(s[firstNum] >= 48 && s[firstNum] <= 57); firstNum++)
+	{
+		if (s[firstNum] == '-')
+		{
+			sign *= -1;
+		}
+	}
+
+	for (i = firstNum; s[i] >= 48 && s[i] <= 57; i++)
+	{
+		resp *= 10;
+		resp += (s[i] - 48);
+	}
+
+	return (sign * resp);
+}
+
+/**
+ * print_int - prints an integer.
+ * @n: int
+ * Return: 0
+ */
+
+void print_int(unsigned long int n)
+{
+
+unsigned  long int divisor = 1, i, resp;
+
+for (i = 0; n / divisor > 9; i++, divisor *= 10)
+;
+
+for (; divisor >= 1; n %= divisor, divisor /= 10)
+{
+	resp = n / divisor;
+	_putchar('0' + resp);
+}
+
+}
 
 /**
  * main - print the result of the multiplication, followed by a new line
@@ -26,24 +74,18 @@ void print_number(unsigned long int n)
  * @argv: list
  * Return: 0
  */
+
 int main(int argc, char const *argv[])
 {
+(void)argc;
 
-	unsigned long int n = 0;
+if (argc != 3)
+{
+	_puts("Error ");
+	exit(98);
+}
+print_int(_atoi(argv[1]) * _atoi(argv[2]));
+_putchar('\n');
 
-	(void)argc;
-
-	if (argc != 3)
-	{
-		printf("Error\n");
-		exit(98);
-	}
-
-	n = atoi(argv[1]) * atoi(argv[2]);
-
-	print_number(n);
-	_putchar('\n');
-
-	return (0);
-
+return (0);
 }
