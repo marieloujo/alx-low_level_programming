@@ -1,3 +1,6 @@
+#ifndef DOG_H
+#define DOG_H
+
 /**
  * struct dog - define new struct of dog data type
  * @name: Dog's name
@@ -20,3 +23,5 @@ void print_dog(struct dog *d);
 typedef struct dog dog_t;
 
 dog_t *new_dog(char *name, float age, char *owner);
+
+#endif
