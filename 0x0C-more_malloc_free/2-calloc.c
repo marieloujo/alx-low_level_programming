@@ -7,7 +7,7 @@
 *@nmemb: lenght of array
 *@size: size of byte
 *
-* Return: pointer of concatenate concanet strings
+* Return: pointer
 */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
