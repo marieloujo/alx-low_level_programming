@@ -1,5 +1,6 @@
 #include "variadic_functions.h"
 #include <string.h>
+#include <stdlib.h>
 
 /**
  * print_int - Function that prints int
@@ -87,12 +88,13 @@ void print_all(const char * const format, ...)
 		{
 			myPrinter[j].printer(list);
 
-			i != (length - 1) ? printf(", ") : printf("\n");
+			i != (length - 1) ? printf(", ") : printf("");
 		}
 
 		i++;
 	}
 
+	printf("\n");
 	va_end(list);
 
 }
