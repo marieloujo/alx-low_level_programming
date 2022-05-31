@@ -63,7 +63,7 @@ void print_all(const char * const format, ...)
 {
 
 	va_list list;
-	size_t i = 0, length = strlen(format);
+	size_t i = 0;
 	int j;
 
 	print_anything myPrinter[] = {
@@ -76,7 +76,8 @@ void print_all(const char * const format, ...)
 
 	va_start(list, format);
 
-	while (i < length)
+
+	while (format && format[i])
 	{
 
 		j = 0;
@@ -88,7 +89,7 @@ void print_all(const char * const format, ...)
 		{
 			myPrinter[j].printer(list);
 
-			if (i != (length - 1))
+			if (i != (strlen(format) - 1))
 				printf(", ");
 		}
 
