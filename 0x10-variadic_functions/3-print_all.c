@@ -89,7 +89,7 @@ void print_all(const char * const format, ...)
 			myPrinter[j].printer(list);
 
 			if (i != (length - 1))
-                printf(", ");
+				printf(", ");
 		}
 
 		i++;
