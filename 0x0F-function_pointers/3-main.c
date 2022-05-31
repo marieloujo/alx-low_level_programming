@@ -13,6 +13,8 @@ int main(int argc, char *argv[])
 
 	int (*operator_fun)(int, int);
 	int result;
+	char *op = argv[2];
+
 
 	if (argc != 4)
 	{
@@ -20,18 +22,12 @@ int main(int argc, char *argv[])
 		exit(98);
 	}
 
-	operator_fun = get_op_func(argv[2]);
+	operator_fun = get_op_func(op);
 
-	if (operator_fun == NULL)
+	if (operator_fun == NULL || op[1] != '\0')
 	{
 		printf("Error\n");
 		exit(99);
-	}
-
-	if (atoi(argv[3]) == 0 && (*(argv[2]) == '/' || *(argv[2]) == '%'))
-	{
-		printf("Error\n");
-		exit(100);
 	}
 
 	result = operator_fun(atoi(argv[1]), atoi(argv[3]));
