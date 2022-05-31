@@ -88,7 +88,8 @@ void print_all(const char * const format, ...)
 		{
 			myPrinter[j].printer(list);
 
-			i != (length - 1) ? printf(", ") : printf("");
+			if (i != (length - 1))
+				printf(", ");
 		}
 
 		i++;
