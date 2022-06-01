@@ -20,6 +20,8 @@ typedef struct list_s
 
 void print_list_element(const list_t *h);
 
+list_t *create_node(const char *str);
+
 size_t print_list(const list_t *h);
 
 size_t list_len(const list_t *h);
