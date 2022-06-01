@@ -14,7 +14,7 @@ size_t print_list(const list_t *h)
 
 	while (h != NULL)
 	{
-		print_list_element(h);
+		printf("[%u] %s\n", h->len, h->str != NULL ? h->str : "(nil)");
 
 		h = h->next;
 		i++;
@@ -24,16 +24,3 @@ size_t print_list(const list_t *h)
 
 }
 
-/**
- * print_list_element - Function that prints list_t
- *
- * @h: pointer of elements
- *
- * Return: void
- */
-void print_list_element(const list_t *h)
-{
-
-	printf("[%u] %s\n", h->len, h->str != NULL ? h->str : "(nil)");
-
-}
