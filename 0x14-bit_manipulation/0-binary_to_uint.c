@@ -1,6 +1,4 @@
 #include "main.h"
-#include <stdlib.h>
-#include <string.h>
 
 /**
  * binary_to_uint - Function that converts a binary number
@@ -15,68 +13,22 @@
 unsigned int binary_to_uint(const char *b)
 {
 
-	unsigned int number = 0, position = 0, len = _strlen(b);
+    int i;
+	unsigned int num = 0;
 
-	if (b == NULL)
+	if (!b)
 		return (0);
 
-	while (len--)
+	for (i = 0; b[i] != '\0'; i++)
 	{
-		if (b[len] == '1')
-			number += ((b[len] - '0') * (_pow(2, position)));
-
-		else if (b[len] != '0')
+		if (b[i] != '0' && b[i] != '1')
 			return (0);
 
-		position++;
+		num <<= 1;
+		if (b[i] == '1')
+			num += 1;
 	}
 
-	return (number);
-}
+	return (num);
 
-/**
- * _strlen - find the length of a string
- * @s: pointer to the string to check
- * Return: void
-*/
-int _strlen(const char *s)
-{
-	int i = 0;
-
-	while (s[i])
-		i++;
-
-	return (i);
-}
-
-/**
- * _pow - calculate power of number
- *
- * @number: number
- * @power: the power
- *
- * Return: value of number at power power
- */
-int _pow(int number, int power)
-{
-	int result = number;
-
-	if (power == 0)
-	{
-		return (1);
-	}
-
-	if (power == 1)
-	{
-		return (number);
-	}
-
-	while (power > 1)
-	{
-		result *= number;
-
-		power--;
-	}
-
-	return (result);
 }
