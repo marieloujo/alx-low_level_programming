@@ -15,7 +15,7 @@
 unsigned int binary_to_uint(const char *b)
 {
 
-	unsigned int number = 0, position = 0, len = strlen(b);
+	unsigned int number = 0, position = 0, len = _strlen(b);
 
 	if (b == NULL)
 		return (0);
@@ -34,6 +34,20 @@ unsigned int binary_to_uint(const char *b)
 	return (number);
 }
 
+/**
+ * _strlen - find the length of a string
+ * @s: pointer to the string to check
+ * Return: void
+*/
+int _strlen(const char *s)
+{
+	int i = 0;
+
+	while (s[i])
+		i++;
+
+	return (i);
+}
 
 /**
  * _pow - calculate power of number

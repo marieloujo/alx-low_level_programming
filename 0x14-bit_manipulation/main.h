@@ -17,4 +17,6 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m);
 
 int _pow(int number, int power);
 
+int _strlen(const char *s);
+
 #endif
