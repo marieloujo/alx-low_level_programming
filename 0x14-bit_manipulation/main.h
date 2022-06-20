@@ -19,4 +19,6 @@ int _pow(int number, int power);
 
 int _strlen(const char *s);
 
+int _putchar(char c);
+
 #endif
