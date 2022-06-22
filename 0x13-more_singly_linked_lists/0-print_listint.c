@@ -2,7 +2,8 @@
 #include <stdio.h>
 
 /**
- * print_listint - Function that prints all the elements of a listint_t list
+ * print_listint - Function that prints all
+ * the elements of a listint_t list
  *
  * @h: list of elements
  *
