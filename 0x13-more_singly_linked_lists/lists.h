@@ -47,5 +47,6 @@ size_t free_listint_safe(listint_t **h);
 
 listint_t *find_listint_loop(listint_t *head);
 
+int _putchar(char c);
 
 #endif
