@@ -32,6 +32,11 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 		}
 		else
 		{
+            if (idx == (unsigned int) listint_len(*head))
+            {
+                return add_nodeint_end(head, n);
+            }
+
 			while (*head != NULL)
 			{
 				if (i == idx)
@@ -53,4 +58,25 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 		}
 	}
 	return (new);
+}
+
+/**
+ * listint_len - Function that prints returns the number of
+ * elements in a linked listint_t list
+ *
+ * @h: list of elements
+ *
+ * Return: number of nodes
+ */
+size_t listint_len(const listint_t *h)
+{
+	size_t i = 0;
+
+	while (h != NULL)
+	{
+		h = h->next;
+		i++;
+	}
+
+	return (i);
 }
