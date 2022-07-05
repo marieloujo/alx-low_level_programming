@@ -10,14 +10,16 @@
  */
 size_t print_list(const list_t *h)
 {
-	const list_t *tmp;
-	unsigned int i;
+	size_t i = 0;
 
-	tmp = h;
-	for (i = 0; tmp; i++)
+	while (h != NULL)
 	{
-		printf("[%u] %s\n", tmp->len, tmp->str);
-		tmp = tmp->next;
+		printf("[%u] %s\n", h->len, h->str != NULL ? h->str : "(nil)");
+
+		h = h->next;
+		i++;
 	}
+
 	return (i);
+
 }
