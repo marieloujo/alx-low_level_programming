@@ -36,13 +36,16 @@ int main(int argc, char *argv[])
 	do {
 		stat_1 = read(fd_1, buffer, MAXSIZE);
 		if (stat_1 == -1)
-			dprintf(SE, "Error: Can't read from file %s\n", argv[1]), exit(98);
-
+		{
+			dprintf(SE, "Error: Can't read from file %s\n", argv[1]);
+			exit(98);
+		}
 		if (stat_1 > 0)
+		{
 			stat_2 = write(fd_2, buffer, (ssize_t) stat_1);
 			if (stat_2 == -1)
 				dprintf(SE, "Error: Can't write to %s\n", argv[2]), exit(99);
-
+		}
 	} while (stat_1 > 0);
 
 	stat_1 = close(fd_1);
