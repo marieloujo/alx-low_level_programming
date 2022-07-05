@@ -10,17 +10,17 @@
  */
 size_t print_list(const list_t *h)
 {
-	size_t i = 0;
+	size_t nbr_nodes = 0;
 	const list_t *list = h;
 
 	while (list != NULL)
 	{
-		printf("[%u] %s\n", list->len, list->str != NULL ? list->str : "(nil)");
-
+		printf("[%d] %s\n", list->len,
+		list->str != NULL ? list->str : "(nil)");
 		list = list->next;
-		i++;
+		nbr_nodes++;
 	}
 
-	return (i);
+	return (nbr_nodes);
 
 }
