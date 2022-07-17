@@ -29,6 +29,33 @@ int pop_dlistint(dlistint_t **head)
 }
 
 /**
+ * pop_dlistint_atend - Function that deletes the last node
+ * of a dlistint_t list
+ * @head: dlistint_t
+ * Return: void
+ */
+int pop_dlistint_atend(dlistint_t **head)
+{
+	dlistint_t *current = *head, *tmp;
+
+	while (current->next)
+	{
+		current = current->next;
+	}
+
+	if (current)
+	{
+		tmp = current;
+		current->prev->next = NULL;
+
+		free(tmp);
+		return (1);
+	}
+
+	return (-1);
+}
+
+/**
  * delete_dnodeint_at_index - deletes the node at index of a
  * dlistint_t linked list
  * @head: pointer to head of the dlistint_t list
@@ -52,8 +79,6 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 	{
 		if (index == i)
 		{
-			printf("tata\n");
-
 			tmp = current;
 			current->prev->next = current->next;
 
@@ -67,6 +92,11 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 
 		current = current->next;
 		i++;
+	}
+
+	if (i == index)
+	{
+		return (pop_dlistint_atend(head));
 	}
 
 	return (-1);

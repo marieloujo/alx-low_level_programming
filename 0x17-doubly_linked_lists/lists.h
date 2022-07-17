@@ -39,4 +39,6 @@ dlistint_t *swap_nodes(dlistint_t *first_node, dlistint_t *second_node);
 
 int pop_dlistint(dlistint_t **head);
 
+int pop_dlistint_atend(dlistint_t **head);
+
 #endif
