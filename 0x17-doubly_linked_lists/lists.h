@@ -35,4 +35,6 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n);
 
 int delete_dnodeint_at_index(dlistint_t **head, unsigned int index);
 
+dlistint_t *swap_nodes(dlistint_t *first_node, dlistint_t *second_node);
+
 #endif
