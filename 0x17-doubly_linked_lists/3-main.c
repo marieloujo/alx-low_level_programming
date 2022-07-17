@@ -21,6 +21,9 @@ int main(void)
     add_dnodeint_end(&head, 98);
     add_dnodeint_end(&head, 402);
     add_dnodeint_end(&head, 1024);
+    add_dnodeint_end(&head, 4514);
+    add_dnodeint_end(&head, 74);
+    add_dnodeint_end(&head, 52);
     print_dlistint(head);
     return (EXIT_SUCCESS);
 }
